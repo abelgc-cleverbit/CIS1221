@@ -13,7 +13,6 @@
     var copy = i; //inferred typing
 
     var other; 
-
     other = 5;
 
     Console.WriteLine(i); 
