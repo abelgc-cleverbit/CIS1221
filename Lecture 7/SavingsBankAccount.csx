@@ -9,8 +9,8 @@ class SavingsBankAccount:BankAccount
     }
 
     //internal functionality, made protected so sub-classes can also make use of this method
-    protected void Save(doubel amount){
-        balance -= amount;
+    protected void Save(double amount){
+        balance -= amount; 
         savingsBalance += amount;
     }
 
@@ -24,7 +24,19 @@ class SavingsBankAccount:BankAccount
         Save(amount * depositPercentageToSave);
     }
 
+    public override double GetBalance(){
+        return balance + savingsBalance;
+    }
 
 
+    public virtual double GetSavingsBalance()
+    {
+        return savingsBalance;
+    }
+
+    public virtual GetEffectiveValue(){
+        return balance; //is this correct
+    }
 
 }
+
