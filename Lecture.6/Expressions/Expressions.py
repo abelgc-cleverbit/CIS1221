@@ -1,5 +1,5 @@
 # use py to interactively run this file
-# use exec(open("Expressions.py").read()) to dynamically load defintions in this file or directly run 'py -i .\typing.py'
+# use exec(open("Expressions.py").read()) to dynamically load defintions in this file or directly run 'py -i .\Expressions.py'
 
 
 from abc import (ABC, abstractmethod)
@@ -26,4 +26,4 @@ class SumExpression(Expression):
 
 
 # 2 + 2
-(SumExpression(ConstantExpression(2),ConstantExpression(2))).evaluate()
+print((SumExpression(ConstantExpression(2),ConstantExpression(2))).evaluate())
