@@ -5,6 +5,7 @@
 #  >>> gcd_it(10,20)
 #  >>> gcd_rec(10,20)
 #  >>> gcd_fun(10,20)
+# use quit() to quit the console
 
 
 # iterative ugly

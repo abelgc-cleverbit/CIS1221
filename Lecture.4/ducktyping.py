@@ -10,8 +10,8 @@
 class Duck:
     def quack(self):
         print('Quack')
-    def fly(self):
-        print('Flap')
+    # def fly(self):
+    #     print('Flap')
 
 
 

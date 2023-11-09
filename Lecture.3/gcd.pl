@@ -4,6 +4,7 @@
 %   - gcd(100,230,X).
 %   - gcd_euc(100,230,X).
 %   - gcdl([100,200,300], X).
+% use halt. to quit
 
 % slow approach using Euclides' original algorithm
 gcd_euc(0, X, X):- X > 0, !.

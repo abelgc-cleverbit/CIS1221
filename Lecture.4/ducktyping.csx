@@ -14,10 +14,10 @@ interface IDuck
 
 class Duck : IDuck
 {
-    public void fly()
-    {
-        Console.WriteLine("Flap");
-    }
+    // public void fly()
+    // {
+    //     Console.WriteLine("Flap");
+    // }
 
     public void quack()
     {
