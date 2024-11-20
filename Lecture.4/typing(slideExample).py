@@ -8,12 +8,15 @@ import random
 def RamdonBool():
     return bool(random.getrandbits(1))
     
-if RamdonBool():
-    x = "9"
-else:
-    x = 9
+def example_method():
+    if RamdonBool():
+        x = "9"
+    else:
+        x = 9
 
-print(x+2) # a type violation 'may' occur if the execution path assigns x the type string
+    print(x+2) # a type violation 'may' occur if the execution path assigns x the type string
 
-y = "string"
-print(y+2) # a type violation 'will' occur
+    # y = "string"
+    # print(y+2) # a type violation 'will' occur
+
+example_method()

@@ -1,6 +1,8 @@
 # use py to interactively run this file
 # use exec(open("parameters.py").read()) to dynamically load defintions in this file or directly run 'py -i .\typing.py'
 
+from ctypes import c_int, addressof
+
 def f(i, a1, a2, a3, s):
     print("    f received value of i = " + str(i))
     i = 2
