@@ -14,8 +14,8 @@ public static void EvaluateSum(string exp)
 
     // split by the position of the 'plus' token
     // parse by every side into an integer
-    var operand1 = int.Parse(exp.Substring(0,plusSignPos));
-    var operand2 = int.Parse(exp.Substring(plusSignPos+1));
+    var operand1 = double.Parse(exp.Substring(0,plusSignPos));
+    var operand2 = double.Parse(exp.Substring(plusSignPos+1));
 
     // convert the expression into a C# expression
     Console.WriteLine(operand1 + operand2);

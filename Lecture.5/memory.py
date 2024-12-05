@@ -10,6 +10,7 @@
 # >>> sys.getsizeof(2 ** 60)
 
 import sys
+import gc
 
 def main():
     n = 9001
@@ -23,6 +24,30 @@ def increment(x):
     print(f"  Final address of x: {id(x)}")
 
 def sizechecker():
-    print(sys.getsizeof([1,2, 3]))
-    print(sys.getsizeof(30))
-    print(sys.getsizeof(30000000000000))
+    print(f"Size of list [1, 2, 3]: {sys.getsizeof([1, 2, 3])} bytes")
+    print(f"Size of integer 30: {sys.getsizeof(30)} bytes")
+    print(f"Size of large integer 30000000000000: {sys.getsizeof(30000000000000)} bytes")
+
+def reference_counting():
+    a = []
+    print(f"Initial reference count of a: {sys.getrefcount(a)}")
+    b = a
+    print(f"Reference count of a after assigning b = a: {sys.getrefcount(a)}")
+    del b
+    print(f"Reference count of a after deleting b: {sys.getrefcount(a)}")
+
+def garbage_collection():
+    class MyClass:
+        def __del__(self):
+            print("MyClass instance is being deleted")
+
+    obj = MyClass()
+    print(f"Object created: {obj}")
+    del obj
+    gc.collect()  # Force garbage collection
+
+# Run all examples
+# main()
+# sizechecker()
+# reference_counting()
+# garbage_collection()
