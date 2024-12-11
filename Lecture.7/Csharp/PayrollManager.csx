@@ -27,9 +27,15 @@ class Employee
         return wage;
     }
 
-    public BankAccount GetBankAccount()
+    protected BankAccount GetBankAccount()
     {
         return bankAccount;
+    }
+
+    public void AddWage(double wage){
+
+        //Add any validation, etc. 
+        bankAccount.Deposit(value);
     }
 }
 
@@ -59,7 +65,10 @@ class PayrollManager
             companyAccount.Withdraw(valueToTransfer);
 
             // Deposit the wage amount into the employee's bank account
-            e.GetBankAccount().Deposit(valueToTransfer);
+            //e.GetBankAccount().Deposit(valueToTransfer);
+            e.AddWage(valueToTransfer);
+
+            //e.GetBankAccount().Withdraw(100)
 
             // Optional: If you need to withdraw the amount immediately after depositing, which is unusual
             // e.GetBankAccount().Withdraw(valueToTransfer);

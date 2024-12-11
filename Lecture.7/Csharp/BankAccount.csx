@@ -21,6 +21,7 @@ class BankAccount: IFinacialAsset{
 
     public virtual void Deposit(double amount){
         balance += amount;
+        logger.LogMessage($"Added this amount {amount}")
     }
 
     public virtual void Withdraw(double amount){

@@ -3,7 +3,7 @@ class SavingsBankAccount:BankAccount
         double savingsBalance; 
         double depositPercentageToSave;
 
-    public SavingsBankAccount(double depositPercentageToSave):base(){
+    public SavingsBankAccount(string id, double depositPercentageToSave):base(id){
         savingsBalance = 0;
         this.depositPercentageToSave = depositPercentageToSave;
     }
